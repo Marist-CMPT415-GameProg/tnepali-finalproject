@@ -1,0 +1,207 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://art/FirTree.escn" type="PackedScene" id=1]
+[ext_resource path="res://art/GrassyPatch.escn" type="PackedScene" id=2]
+[ext_resource path="res://art/BareTree.escn" type="PackedScene" id=3]
+[ext_resource path="res://art/RockSmall.escn" type="PackedScene" id=4]
+[ext_resource path="res://art/SnowyFirTree.escn" type="PackedScene" id=5]
+[ext_resource path="res://art/RockMedium.escn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://art/SnowyRockSmall.escn" type="PackedScene" id=8]
+[ext_resource path="res://art/SnowyRockMedium.escn" type="PackedScene" id=9]
+[ext_resource path="res://art/RockLarge.escn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/SeekerPrefab.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/SnowyRockLarge.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/FirTree.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/PotionOfInvisibilty.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Materials/Prototype.tres" type="Material" id=15]
+
+[sub_resource type="NavigationMesh" id=4]
+vertices = PoolVector3Array( 48, 0.737209, 27.9736, 46, 0.737209, 22.9736, 49, 0.737209, 30.9736, 54, 0.737209, 35.9736, 51, 0.737209, 37.9736, 52, 0.737209, 40.9736, 57, 0.737209, 40.9736, 33, 0.737209, -98.0264, 26, 0.737209, -98.0264, -16, 0.737209, -62.0264, 52, 0.737209, 25.9736, 48, 0.737209, 27.9736, 49, 0.737209, 30.9736, 53, 0.737209, 30.9736, 82, 0.737209, -98.0264, 75, 0.737209, -98.0264, 26, 0.737209, -26.0264, 53, 0.737209, 45.9736, 52, 0.737209, 43.9736, 45, 0.737209, 43.9736, 33, 0.737209, 97.9736, 45, 0.737209, 97.9736, 44, 0.737209, 37.9736, 49, 0.737209, 36.9736, 49, 0.737209, 30.9736, 46, 0.737209, 22.9736, 27, 0.737209, 20.9736, 26, 0.737209, 26.9736, 173, 0.737209, 97.9736, 180, 0.737209, 97.9736, 180, 0.737209, 90.9736, 53, 0.737209, 30.9736, 54, 0.737209, 35.9736, 57, 0.737209, 40.9736, -6, 0.737209, 26.9736, -16, 0.737209, 26.9736, -16, 0.737209, 34.9736, -16, 0.737209, -35.0264, -16, 0.737209, -26.0264, -6, 0.737209, -26.0264, 180, 0.737209, -86.0264, 180, 0.737209, -98.0264, 173, 0.737209, -98.0264, 23, 2.73721, -15.0264, 23, 2.73721, -22.0264, 11, 2.73721, -22.0264, 167, 0.737209, 97.9736, 173, 0.737209, 97.9736, 180, 0.737209, 90.9736, -16, 0.737209, 88.9736, -16, 0.737209, 97.9736, -4, 0.737209, 97.9736, -4, 0.737209, -98.0264, -16, 0.737209, -98.0264, -16, 0.737209, -89.0264, 11, 2.73721, 22.9736, 23, 2.73721, 22.9736, 23, 2.73721, 13.9736, 118, 0.737209, 97.9736, 180, 0.737209, 23.9736, 180, 0.737209, 11.9736, -11, 2.73721, -22.0264, -22, 2.73721, -22.0264, -22, 2.73721, -11.0264, 52, 0.737209, 25.9736, 53, 0.737209, 30.9736, 57, 0.737209, 40.9736, 106, 0.737209, 97.9736, 118, 0.737209, 97.9736, -22, 2.73721, 10.9736, -22, 2.73721, 22.9736, -11, 2.73721, 22.9736, 180, 0.737209, -86.0264, 173, 0.737209, -98.0264, 167, 0.737209, -98.0264, 180, 0.737209, -74.0264, 167, 0.737209, 97.9736, 180, 0.737209, 90.9736, 180, 0.737209, 84.9736, 155, 0.737209, 97.9736, 23, 2.73721, -7.0264, 23, 2.73721, -15.0264, 11, 2.73721, -22.0264, -6, 0.737209, 26.9736, -16, 0.737209, 34.9736, -16, 0.737209, 43.9736, 5, 0.737209, 26.9736, 50, 0.737209, 20.9736, 52, 0.737209, 25.9736, 118, 0.737209, 97.9736, 57, 0.737209, 44.9736, 69, 0.737209, 97.9736, 75, 0.737209, 97.9736, -16, 0.737209, -44.0264, -16, 0.737209, -35.0264, -6, 0.737209, -26.0264, 5, 0.737209, -26.0264, 27, 0.737209, 13.9736, 27, 0.737209, 20.9736, 46, 0.737209, 22.9736, -16, 0.737209, 79.9736, -16, 0.737209, 88.9736, -4, 0.737209, 97.9736, -4, 0.737209, -98.0264, -16, 0.737209, -89.0264, -16, 0.737209, -80.0264, 27, 0.737209, 13.9736, 46, 0.737209, 22.9736, 50, 0.737209, 20.9736, 27, 0.737209, 7.9736, 0, 2.73721, -22.0264, -11, 2.73721, -22.0264, -22, 2.73721, -11.0264, -22, 2.73721, -0.0263977, 0, 2.73721, 22.9736, 11, 2.73721, 22.9736, 23, 2.73721, 13.9736, 23, 2.73721, 7.9736, 23, 2.73721, -0.0263977, 23, 2.73721, -7.0264, 11, 2.73721, -22.0264, -22, 2.73721, 10.9736, -11, 2.73721, 22.9736, 0, 2.73721, 22.9736, -22, 2.73721, -0.0263977, 45, 0.737209, 43.9736, 44, 0.737209, 37.9736, 26, 0.737209, 26.9736, 15, 0.737209, 26.9736, 180, 0.737209, -25.0264, 180, 0.737209, -37.0264, 118, 0.737209, -98.0264, 53, 0.737209, 45.9736, 45, 0.737209, 97.9736, 57, 0.737209, 97.9736, 57, 0.737209, 44.9736, 75, 0.737209, 97.9736, 82, 0.737209, 97.9736, 57, 0.737209, 44.9736, 53, 0.737209, 45.9736, 57, 0.737209, 97.9736, 69, 0.737209, 97.9736, -16, 0.737209, 70.9736, -16, 0.737209, 79.9736, -4, 0.737209, 97.9736, 8, 0.737209, 97.9736, -4, 0.737209, -98.0264, -16, 0.737209, -80.0264, -16, 0.737209, -71.0264, 8, 0.737209, -98.0264, 124, 0.737209, 97.9736, 131, 0.737209, 97.9736, 180, 0.737209, 60.9736, 23, 2.73721, -0.0263977, 11, 2.73721, -22.0264, 0, 2.73721, -22.0264, -22, 2.73721, -0.0263977, 0, 2.73721, 22.9736, 23, 2.73721, 7.9736, 180, 0.737209, -49.0264, 143, 0.737209, -98.0264, 131, 0.737209, -98.0264, 5, 0.737209, 26.9736, -16, 0.737209, 43.9736, -16, 0.737209, 52.9736, 15, 0.737209, 26.9736, -16, 0.737209, -53.0264, -16, 0.737209, -44.0264, 5, 0.737209, -26.0264, 15, 0.737209, -26.0264, 45, 0.737209, -98.0264, 33, 0.737209, -98.0264, -16, 0.737209, -62.0264, 180, 0.737209, -74.0264, 167, 0.737209, -98.0264, 155, 0.737209, -98.0264, 180, 0.737209, -62.0264, 155, 0.737209, 97.9736, 180, 0.737209, 84.9736, 180, 0.737209, 72.9736, 143, 0.737209, 97.9736, 180, 0.737209, -49.0264, 131, 0.737209, -98.0264, 124, 0.737209, -98.0264, 118, 0.737209, 97.9736, 124, 0.737209, 97.9736, 180, 0.737209, 60.9736, 180, 0.737209, 48.9736, 94, 0.737209, -98.0264, 82, 0.737209, -98.0264, 26, 0.737209, -26.0264, 57, 0.737209, 40.9736, 94, 0.737209, 97.9736, 106, 0.737209, 97.9736, 118, 0.737209, 97.9736, 180, 0.737209, -0.0263977, 180, 0.737209, -7.0264, 106, 0.737209, -98.0264, 26, 0.737209, -26.0264, 50, 0.737209, 20.9736, -16, 0.737209, 61.9736, -16, 0.737209, 70.9736, 8, 0.737209, 97.9736, 20, 0.737209, 97.9736, 8, 0.737209, -98.0264, -16, 0.737209, -71.0264, -16, 0.737209, -62.0264, 20, 0.737209, -98.0264, 106, 0.737209, -98.0264, 94, 0.737209, -98.0264, 26, 0.737209, -26.0264, 180, 0.737209, -49.0264, 124, 0.737209, -98.0264, 118, 0.737209, -98.0264, 180, 0.737209, -37.0264, 118, 0.737209, 97.9736, 180, 0.737209, 35.9736, 180, 0.737209, 23.9736, 118, 0.737209, 97.9736, 180, 0.737209, 11.9736, 180, 0.737209, -0.0263977, 180, 0.737209, -25.0264, 118, 0.737209, -98.0264, 106, 0.737209, -98.0264, 180, 0.737209, -13.0264, 27, 0.737209, 7.9736, 23, 2.73721, 7.9736, 23, 2.73721, 13.9736, 27, 0.737209, 13.9736, 180, 0.737209, -7.0264, 180, 0.737209, -13.0264, 106, 0.737209, -98.0264, 57, 0.737209, 40.9736, 57, 0.737209, 44.9736, 82, 0.737209, 97.9736, 94, 0.737209, 97.9736, 27, 0.737209, -1.0264, 27, 0.737209, 7.9736, 50, 0.737209, 20.9736, 27, 0.737209, -10.0264, 27, 0.737209, -1.0264, 50, 0.737209, 20.9736, 27, 0.737209, -19.0264, 27, 0.737209, -10.0264, 50, 0.737209, 20.9736, 15, 0.737209, 26.9736, -16, 0.737209, 52.9736, -16, 0.737209, 61.9736, 26, 0.737209, 97.9736, 33, 0.737209, 97.9736, 45, 0.737209, 43.9736, -16, 0.737209, -62.0264, -16, 0.737209, -53.0264, 15, 0.737209, -26.0264, 26, 0.737209, -26.0264, 57, 0.737209, -98.0264, 45, 0.737209, -98.0264, 180, 0.737209, -56.0264, 180, 0.737209, -62.0264, 155, 0.737209, -98.0264, 69, 0.737209, -98.0264, 57, 0.737209, -98.0264, 26, 0.737209, -26.0264, 118, 0.737209, 97.9736, 180, 0.737209, 48.9736, 180, 0.737209, 41.9736, 143, 0.737209, 97.9736, 180, 0.737209, 72.9736, 180, 0.737209, 60.9736, 131, 0.737209, 97.9736, 26, 0.737209, -26.0264, 27, 0.737209, -19.0264, 50, 0.737209, 20.9736, 180, 0.737209, -49.0264, 180, 0.737209, -56.0264, 155, 0.737209, -98.0264, 143, 0.737209, -98.0264, -16, 0.737209, 61.9736, 20, 0.737209, 97.9736, 26, 0.737209, 97.9736, 26, 0.737209, -98.0264, 20, 0.737209, -98.0264, -16, 0.737209, -62.0264, 118, 0.737209, 97.9736, 180, 0.737209, 41.9736, 180, 0.737209, 35.9736, 75, 0.737209, -98.0264, 69, 0.737209, -98.0264, 26, 0.737209, -26.0264, -12, 25.7372, -23.0264, -23, 25.7372, -23.0264, -23, 25.7372, -12.0264, -23, 25.7372, 11.9736, -23, 25.7372, 23.9736, -12, 25.7372, 23.9736, 24, 25.7372, -12.0264, 24, 25.7372, -23.0264, 12, 25.7372, -23.0264, 12, 25.7372, 23.9736, 24, 25.7372, 23.9736, 24, 25.7372, 11.9736, 0, 25.7372, -23.0264, -12, 25.7372, -23.0264, -23, 25.7372, -12.0264, -23, 25.7372, -0.0263977, -23, 25.7372, 11.9736, -12, 25.7372, 23.9736, 0, 25.7372, 23.9736, 24, 25.7372, -0.0263977, 24, 25.7372, -12.0264, 12, 25.7372, -23.0264, 0, 25.7372, -23.0264, 0, 25.7372, 23.9736, 12, 25.7372, 23.9736, 24, 25.7372, 11.9736, -23, 25.7372, -0.0263977, -23, 25.7372, 11.9736, 0, 25.7372, 23.9736, 24, 25.7372, 11.9736, 24, 25.7372, -0.0263977, 0, 25.7372, -23.0264, 47, 4.73721, 38.9736, 47, 4.73721, 40.9736, 50, 5.73721, 40.9736, 50, 5.73721, 38.9736 )
+polygons = [ PoolIntArray( 2, 1, 0 ), PoolIntArray( 4, 3, 5 ), PoolIntArray( 5, 3, 6 ), PoolIntArray( 9, 8, 7 ), PoolIntArray( 12, 11, 13 ), PoolIntArray( 13, 11, 10 ), PoolIntArray( 16, 15, 14 ), PoolIntArray( 18, 17, 19 ), PoolIntArray( 19, 17, 21 ), PoolIntArray( 19, 21, 20 ), PoolIntArray( 23, 22, 24 ), PoolIntArray( 24, 22, 25 ), PoolIntArray( 25, 22, 27 ), PoolIntArray( 25, 27, 26 ), PoolIntArray( 30, 29, 28 ), PoolIntArray( 33, 32, 31 ), PoolIntArray( 36, 35, 34 ), PoolIntArray( 39, 38, 37 ), PoolIntArray( 42, 41, 40 ), PoolIntArray( 45, 44, 43 ), PoolIntArray( 48, 47, 46 ), PoolIntArray( 51, 50, 49 ), PoolIntArray( 54, 53, 52 ), PoolIntArray( 57, 56, 55 ), PoolIntArray( 60, 59, 58 ), PoolIntArray( 63, 62, 61 ), PoolIntArray( 65, 64, 66 ), PoolIntArray( 66, 64, 67 ), PoolIntArray( 67, 64, 68 ), PoolIntArray( 71, 70, 69 ), PoolIntArray( 73, 72, 74 ), PoolIntArray( 74, 72, 75 ), PoolIntArray( 77, 76, 78 ), PoolIntArray( 78, 76, 79 ), PoolIntArray( 82, 81, 80 ), PoolIntArray( 84, 83, 85 ), PoolIntArray( 85, 83, 86 ), PoolIntArray( 89, 88, 87 ), PoolIntArray( 92, 91, 90 ), PoolIntArray( 94, 93, 95 ), PoolIntArray( 95, 93, 96 ), PoolIntArray( 99, 98, 97 ), PoolIntArray( 102, 101, 100 ), PoolIntArray( 105, 104, 103 ), PoolIntArray( 107, 106, 108 ), PoolIntArray( 108, 106, 109 ), PoolIntArray( 111, 110, 112 ), PoolIntArray( 112, 110, 113 ), PoolIntArray( 116, 115, 117 ), PoolIntArray( 117, 115, 114 ), PoolIntArray( 120, 119, 118 ), PoolIntArray( 122, 121, 123 ), PoolIntArray( 123, 121, 124 ), PoolIntArray( 126, 125, 127 ), PoolIntArray( 127, 125, 128 ), PoolIntArray( 131, 130, 129 ), PoolIntArray( 134, 133, 132 ), PoolIntArray( 137, 136, 135 ), PoolIntArray( 139, 138, 140 ), PoolIntArray( 140, 138, 141 ), PoolIntArray( 143, 142, 144 ), PoolIntArray( 144, 142, 145 ), PoolIntArray( 147, 146, 148 ), PoolIntArray( 148, 146, 149 ), PoolIntArray( 152, 151, 150 ), PoolIntArray( 153, 158, 154 ), PoolIntArray( 154, 158, 155 ), PoolIntArray( 155, 158, 157 ), PoolIntArray( 155, 157, 156 ), PoolIntArray( 161, 160, 159 ), PoolIntArray( 163, 162, 164 ), PoolIntArray( 164, 162, 165 ), PoolIntArray( 167, 166, 168 ), PoolIntArray( 168, 166, 169 ), PoolIntArray( 172, 171, 170 ), PoolIntArray( 174, 173, 175 ), PoolIntArray( 175, 173, 176 ), PoolIntArray( 178, 177, 179 ), PoolIntArray( 179, 177, 180 ), PoolIntArray( 183, 182, 181 ), PoolIntArray( 185, 184, 186 ), PoolIntArray( 186, 184, 187 ), PoolIntArray( 190, 189, 188 ), PoolIntArray( 193, 192, 191 ), PoolIntArray( 195, 194, 196 ), PoolIntArray( 196, 194, 199 ), PoolIntArray( 196, 199, 198 ), PoolIntArray( 196, 198, 197 ), PoolIntArray( 201, 200, 202 ), PoolIntArray( 202, 200, 203 ), PoolIntArray( 205, 204, 206 ), PoolIntArray( 206, 204, 207 ), PoolIntArray( 210, 209, 208 ), PoolIntArray( 212, 211, 213 ), PoolIntArray( 213, 211, 214 ), PoolIntArray( 217, 216, 215 ), PoolIntArray( 220, 219, 218 ), PoolIntArray( 222, 221, 223 ), PoolIntArray( 223, 221, 224 ), PoolIntArray( 228, 227, 225 ), PoolIntArray( 225, 227, 226 ), PoolIntArray( 231, 230, 229 ), PoolIntArray( 233, 232, 234 ), PoolIntArray( 234, 232, 235 ), PoolIntArray( 236, 238, 237 ), PoolIntArray( 241, 240, 239 ), PoolIntArray( 244, 243, 242 ), PoolIntArray( 246, 245, 247 ), PoolIntArray( 247, 245, 250 ), PoolIntArray( 247, 250, 248 ), PoolIntArray( 248, 250, 249 ), PoolIntArray( 252, 251, 253 ), PoolIntArray( 253, 251, 254 ), PoolIntArray( 254, 251, 256 ), PoolIntArray( 254, 256, 255 ), PoolIntArray( 259, 258, 257 ), PoolIntArray( 262, 261, 260 ), PoolIntArray( 265, 264, 263 ), PoolIntArray( 267, 266, 268 ), PoolIntArray( 268, 266, 269 ), PoolIntArray( 272, 271, 270 ), PoolIntArray( 274, 273, 275 ), PoolIntArray( 275, 273, 276 ), PoolIntArray( 279, 278, 277 ), PoolIntArray( 282, 281, 280 ), PoolIntArray( 285, 284, 283 ), PoolIntArray( 288, 287, 286 ), PoolIntArray( 291, 290, 289 ), PoolIntArray( 294, 293, 292 ), PoolIntArray( 297, 296, 295 ), PoolIntArray( 300, 299, 298 ), PoolIntArray( 302, 301, 303 ), PoolIntArray( 303, 301, 304 ), PoolIntArray( 305, 307, 306 ), PoolIntArray( 309, 308, 310 ), PoolIntArray( 310, 308, 311 ), PoolIntArray( 314, 313, 312 ), PoolIntArray( 316, 315, 317 ), PoolIntArray( 317, 315, 318 ), PoolIntArray( 318, 315, 319 ), PoolIntArray( 319, 315, 320 ), PoolIntArray( 324, 323, 321 ), PoolIntArray( 321, 323, 322 ) ]
+sample_partition_type = 2
+geometry_parsed_geometry_type = 2
+cell_size = 1.0
+cell_height = 1.0
+agent_height = 2.0
+agent_radius = 1.0
+agent_max_climb = 2.0
+filter_ledge_spans = true
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.603922, 1, 0.384314, 1 )
+
+[node name="Outdoors" type="Spatial"]
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.0206632, 0.999786, 0, -0.999786, 0.0206632, -8.25773, 66.2594, -3.78504 )
+
+[node name="Forest" type="Spatial" parent="."]
+transform = Transform( 2, 0, 0, 0, 1.9985, -0.0773338, 0, 0.0773338, 1.9985, 2.60422, 1.39628, -0.816976 )
+
+[node name="FirTree9" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999824, 0.0187786, 0, -0.0187786, 0.999824, -0.307122, -0.533701, 7.87487 )
+
+[node name="SnowyRock2" parent="Forest" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, -3.72529e-09, 0, 3.72529e-09, 1, 2.54988, 0.885873, -1.68207 )
+
+[node name="BareTree5" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.494045, -1.03244, -1.07438 )
+
+[node name="BareTree3" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, -3.72529e-09, 0, 3.72529e-09, 1, -9.06534, -1.28508, 1.98482 )
+
+[node name="Rock3" parent="Forest" instance=ExtResource( 4 )]
+transform = Transform( 0.999643, -0.0267153, 0.00103377, 0.0267153, 0.999644, 1.37836e-05, -0.00103377, 1.38283e-05, 1, -9.51219, -0.964656, -3.67627 )
+
+[node name="SnowyFirTree" parent="Forest" instance=ExtResource( 5 )]
+transform = Transform( 0.999806, -0.0196888, 0.000761872, 0.0196888, 0.999807, 7.50273e-06, -0.000761872, 7.50646e-06, 1, -5.0162, -1.47077, 7.3609 )
+
+[node name="Rock2" parent="Forest" instance=ExtResource( 6 )]
+transform = Transform( 3, 0, 0, 0, 3, -2.23517e-08, 0, 2.23517e-08, 3, -8.36681, -1.42782, -13.1987 )
+
+[node name="Rock1" parent="Forest" instance=ExtResource( 4 )]
+transform = Transform( 3.73687, -0.946356, -3.18437, 0.659621, 4.90879, -0.684752, 3.25588, 0.0916693, 3.79355, -4.28292, -1.02221, -10.2149 )
+
+[node name="BareTree2" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 0.999595, 0.0132356, 0.0251977, -0.0142332, 0.999108, 0.0398342, -0.0246478, -0.0401767, 0.998892, -3.33102, -1.22302, -6.49831 )
+
+[node name="GrassyPatch" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( -0.968561, 0.227642, -0.100346, -0.229822, -0.973178, 0.010596, -0.0952425, 0.0333248, 0.994898, -5.86883, -1.47291, -3.64249 )
+
+[node name="BareTree" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, -3.35276e-08, 0, 3.35276e-08, 1, -11.5332, -0.654235, -2.6545 )
+
+[node name="FirTree7" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999947, 0.0102973, 0, -0.0102973, 0.999947, -1.98576, -0.420941, 5.02476 )
+
+[node name="FirTree4" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 0.999769, -0.0209681, 0.00462702, 0.0206381, 0.997831, 0.0625256, -0.00592803, -0.0624157, 0.998034, 2.93853, -1.28761, -1.37691 )
+
+[node name="FirTree3" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1.54981, 0, 0, 0, 2.24759, -7.45058e-09, 0, 7.45058e-09, 2.24759, 0.67949, -1.26084, -2.71325 )
+
+[node name="FirTree" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1.13646, 0, 0, 0, 1.11528, -0.218384, 0, 0.218384, 1.11528, -8.15708, -1.6245, 9.40581 )
+
+[node name="FirTree2" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1.69804, 0, 0, 0, 1.69791, -0.0211894, 0, 0.0211894, 1.69791, -1.91668, -1.1645, 3.60166 )
+
+[node name="FirTree5" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1334, -0.542845, 7.11572 )
+
+[node name="FirTree6" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, -3.72529e-09, 0, 3.72529e-09, 1, -3.99438, -0.77354, 9.27508 )
+
+[node name="SnowyFirTree2" parent="Forest" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.11759e-08, 0, -1.11759e-08, 1, 4.65523, -0.784678, 1.41514 )
+
+[node name="RockLarge" parent="Forest" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.49012e-08, 0, -1.49012e-08, 1, -22.1669, -1.07243, -2.28626 )
+
+[node name="Rock4" parent="Forest" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, -3.72529e-09, 0, 3.72529e-09, 1, -8.0788, -1.41688, 0.0746395 )
+
+[node name="FirTree8" parent="Forest" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, -7.66554, -0.650437, 0.0115482 )
+
+[node name="BareTree4" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96486, -1.49955, -5.26663 )
+
+[node name="SnowyRock3" parent="Forest" instance=ExtResource( 8 )]
+transform = Transform( 0.972715, 0.00897081, 0.231829, -0.00897081, 0.99996, -0.00105423, -0.231829, -0.00105422, 0.972757, 0.452936, -0.273911, -5.1088 )
+
+[node name="GrassyPatch2" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 0.99789, -0.0648844, 0.00251075, 0.0648843, 0.997895, 8.16397e-05, -0.00251076, 8.15652e-05, 0.999999, -4.50281, -1.69767, -3.89501 )
+
+[node name="GrassyPatch4" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.86265e-08, 0, -1.86265e-08, 1, -12.2712, -1.82563, -8.01062 )
+
+[node name="GrassyPatch3" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.11759e-08, 0, -1.11759e-08, 1, -5.08472, -1.79166, -4.52825 )
+
+[node name="SnowyFirTree3" parent="Forest" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 0.999936, -0.0114317, 0, 0.0114317, 0.999936, 2.47276, -1.10783, 2.49335 )
+
+[node name="RockSmall" parent="Forest" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.11759e-08, 0, -1.11759e-08, 1, -0.00548744, -1.10715, 5.22567 )
+
+[node name="GrassyPatch7" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 1.11759e-08, 0, -1.11759e-08, 1, -8.70311, -1.85321, -6.1898 )
+
+[node name="GrassyPatch6" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 7.45058e-09, 0, -7.45058e-09, 1, -7.70418, -1.64175, -3.10343 )
+
+[node name="GrassyPatch5" parent="Forest" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 7.45058e-09, 0, -7.45058e-09, 1, -6.98697, -1.7579, -5.44979 )
+
+[node name="BareTree6" parent="Forest" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 7.45058e-09, 0, -7.45058e-09, 1, -0.301418, -1.20334, 0.938213 )
+
+[node name="GrassyPatch" parent="Forest/BareTree6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 3.72529e-09, 0, -3.72529e-09, 1, -5.28523, -0.559112, -3.48162 )
+
+[node name="Character" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55697, 1.65372, 0 )
+walk_speed = 3.0
+run_speed = 8.0
+
+[node name="Navigation" type="Navigation" parent="." groups=["navigation"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.1415, 0, 0 )
+
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
+navmesh = SubResource( 4 )
+
+[node name="World" type="CSGCombiner" parent="Navigation/NavigationMeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.775336, 0 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="Navigation/NavigationMeshInstance/World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.9211, 0 )
+width = 50.0
+height = 25.0
+depth = 50.0
+material = ExtResource( 15 )
+
+[node name="CSGBox3" type="CSGBox" parent="Navigation/NavigationMeshInstance/World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.6089, 0 )
+operation = 2
+width = 48.0
+height = 23.0
+depth = 48.0
+material = ExtResource( 15 )
+
+[node name="CSGBox4" type="CSGBox" parent="Navigation/NavigationMeshInstance/World"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.581, 4.10888, 11.139 )
+operation = 2
+width = 48.0
+height = 8.0
+depth = 6.5894
+material = ExtResource( 15 )
+
+[node name="CSGBox2" type="CSGBox" parent="Navigation/NavigationMeshInstance/World"]
+transform = Transform( 100, 0, 0, 0, 1, 0, 0, 0, 100, 82.2234, -2.0851, -0.026401 )
+use_collision = true
+material = SubResource( 3 )
+
+[node name="SnowyRockLarge" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 12 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.9844, -0.30976, 40.715 )
+
+[node name="FirTree" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 13 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 54.3725, -0.309761, 43.1131 )
+
+[node name="FirTree2" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 13 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 50.9266, -0.30976, 33.8401 )
+
+[node name="FirTree3" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 13 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 48.9479, -0.309761, 24.4423 )
+
+[node name="PotionOfInvisibilty" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.9511, 3.40063, 34.6472 )
+
+[node name="PotionOfInvisibilty2" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.0121, 3.40063, 8.48161 )
+
+[node name="Seeker" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.3417, 4.97376, 11.1229 )
+map_radius = 250
