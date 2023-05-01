@@ -56,7 +56,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="MultiplyTimer" type="Timer" parent="."]
-wait_time = 120.0
+wait_time = 92.911
 autostart = true
 
 [node name="WanderWaitTime" type="Timer" parent="."]

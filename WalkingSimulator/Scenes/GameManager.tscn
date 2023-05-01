@@ -70,7 +70,7 @@ margin_right = 149.5
 margin_bottom = 65.5
 custom_colors/font_color = Color( 0.952941, 0.752941, 0.752941, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Retray"
+text = "Retry"
 icon_align = 1
 
 [connection signal="pressed" from="ViewportContainer/GUI/GameOverScreen/Retray" to="." method="on_retray_pressed"]
